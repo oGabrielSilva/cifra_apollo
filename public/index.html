@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.9" />
+    <meta
+      name="description"
+      content="Cifra Apollo foi desenvolvido para estudar criptografias do tipo Cifras de César. Criptografe sua mensagem aqui"
+    />
+    <meta name="author" content="Gabriel Henrique da Silva - odev.gabriel@gmail.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/icon.svg" type="image/svg+xml" sizes="any" />
+    <link rel="stylesheet" href="style/main.css" />
+    <script src="dist/bundle.js" defer></script>
+    <title>Cifra Apollo</title>
+  </head>
+  <body>
+    <div id="container-modal">
+      <section id="modal">
+        <p id="modal-message"></p>
+        <button id="modal-copy">
+          <span class="material-symbols-outlined modal-copy">content_copy</span>
+        </button>
+      </section>
+    </div>
+    <div id="container">
+      <main>
+        <div id="btn-set-theme-container">
+          <button id="btn-set-theme">
+            <span class="material-symbols-outlined">light_mode</span>
+          </button>
+        </div>
+        <h1>Cifra Apollo</h1>
+        <img
+          id="icon"
+          src="images/icon.svg"
+          width="70px"
+          height="70px"
+          alt="Ícone do Cifra Apollo"
+          draggable="false"
+        />
+        <section>
+          <p id="sub">Criptografe ou decriptografe seu texto. Cifra Apollo é uma aplicação para estudo</p>
+          <label>
+            <span>Defina a cifra</span>
+            <input min="0" max="100" value="12" placeholder="Cifra númerica..." type="number" id="cipher" />
+          </label>
+          <textarea placeholder="Escreva sua mensagem aqui..." id="content"></textarea>
+          <div id="container-btn">
+            <button id="cr" class="btn">
+              <span>Criptografar</span><span class="ico material-symbols-outlined">lock</span>
+            </button>
+            <button id="dc" class="btn">
+              <span>Descriptografar</span><span class="ico material-symbols-outlined">lock_open</span>
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <a href="mailto:odev.gabriel@gmail.com">&copy; Gabriel Henrique da Silva</a>
+    </footer>
+  </body>
+</html>
