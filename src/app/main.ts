@@ -1,4 +1,6 @@
 import changeTheme, { initTheme } from '../resources/colors';
+import map from '../utils/map';
+import cipher from './modules/apollo/cipher';
 import encrypt from './modules/encrypt';
 
 const btnSetTheme = document.querySelector('#btn-set-theme');
@@ -62,3 +64,7 @@ if (encryptButton && cipherInput && decryptButton) {
 }
 
 initTheme();
+
+const c = cipher('Olá mundo! Hello world.', 10);
+console.log('crypt: ', c);
+console.log('dcrypt: ', cipher(c, 10, true));
