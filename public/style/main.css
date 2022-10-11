@@ -177,11 +177,8 @@ main button#dc * {
 }
 
 footer {
-  min-height: 10vh;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-top: 3.5rem;
 }
 
 footer a {

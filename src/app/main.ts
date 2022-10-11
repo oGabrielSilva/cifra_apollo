@@ -42,29 +42,21 @@ if (encryptButton && cipherInput && decryptButton) {
   cipherInput.addEventListener('input', (event) => {
     const value = Number((event.target as HTMLTextAreaElement).value);
     if (value < 0 || typeof value !== 'number') return (cipherInput.value = '' + 1);
-    if (value > 100) return (cipherInput.value = '100');
+    if (value > 133) return (cipherInput.value = '139');
     cipherInput.value = String(Math.abs(value));
   });
 
   encryptButton.addEventListener('click', () => {
-    const cipher = Number(cipherInput.value);
-    modalMessage.textContent = encrypt(input.value, typeof cipher === 'number' && cipher !== 0 ? cipher : 2);
+    const key = Number(cipherInput.value);
+    modalMessage.textContent = cipher(input.value, typeof key === 'number' && key !== 0 ? key : 2);
     containerModal.style.top = '0';
   });
 
   decryptButton.addEventListener('click', () => {
-    const cipher = Number(cipherInput.value);
-    modalMessage.textContent = encrypt(
-      input.value,
-      typeof cipher === 'number' && cipher !== 0 ? cipher : 2,
-      true
-    );
+    const key = Number(cipherInput.value);
+    modalMessage.textContent = cipher(input.value, typeof key === 'number' && key !== 0 ? key : 2, true);
     containerModal.style.top = '0';
   });
 }
 
 initTheme();
-
-const c = cipher('Olá mundo! Hello world.', 10);
-console.log('crypt: ', c);
-console.log('dcrypt: ', cipher(c, 10, true));
